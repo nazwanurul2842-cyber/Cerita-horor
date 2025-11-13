@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Malam yang Tak Berujung</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Google Fonts: Creepster + Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Playfair+Display:wght@400;700&family=Crimson+Text&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --primary-dark: #2F1B1B;
+      --accent-warm: #A0522D;
+      --highlight: #8B4513;
+      --blood-red: #5D1A1A;
+      --text-light: #E8D5C4;
+    }
+
+    body {
+      background-color: #1a0f0f;
+      color: var(--text-light);
+      font-family: 'Crimson Text', serif;
+      background-image: 
+        radial-gradient(circle at 20% 80%, rgba(139, 69, 19, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(160, 82, 45, 0.1) 0%, transparent 50%);
+      background-attachment: fixed;
+      min-height: 100vh;
+    }
+
+    .navbar {
+      background-color: rgba(47, 27, 27, 0.95) !important;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar-brand, .nav-link {
+      color: #E8D5C4 !important;
+      font-family: 'Creepster', cursive;
+      font-size: 1.4rem;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #ff6b6b !important;
+      text-shadow: 0 0 10px rgba(255, 107, 107, 0.7);
+    }
+
+    .hero-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(135deg, rgba(139, 69, 19, 0.2), rgba(47, 27, 27, 0.6));
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+
+    h1.display-3 {
+      font-family: 'Creepster', cursive;
+      color: #ff6b6b;
+      text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+      animation: flicker 3s infinite alternate;
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.98; }
+      52% { opacity: 1; }
+    }
+
+    .story-card {
+      background: rgba(47, 27, 27, 0.85);
+      border: 1px solid var(--accent-warm);
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      backdrop-filter: blur(5px);
+    }
+
+    .story-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(139, 69, 19, 0.4);
+    }
+
+    .story-title {
+      font-family: 'Playfair Display', serif;
+      color: #ff6b6b;
+      font-weight: 700;
+    }
+
+    .story-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #E8D5C4;
+    }
+
+    .footer {
+      background-color: var(--primary-dark);
+      color: #A0522D;
+      font-family: 'Creepster', cursive;
+    }
+
+    .blood-drip {
+      color: #5D1A1A;
+      animation: drip 2s infinite;
+    }
+
+    @keyframes drip {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(5px); }
+      100% { transform: translateY(0); }
+    }
+
+    .img-placeholder {
+      background: linear-gradient(45deg, #3d2b1f, #5d4037);
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #E8D5C4;
+      font-family: 'Creepster', cursive;
+      font-size: 1.5rem;
+      border-bottom: 3px solid var(--accent-warm);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Malam Gelap</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="tugas171.html">Cerita 1</a></li>
+          <li class="nav-item"><a class="nav-link" href="tugas172.html">Cerita 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="tugas173.html">Cerita 3</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section text-center">
+    <div class="container hero-content">
+      <h1 class="display-3 mb-4">Malam yang Tak Berujung</h1>
+      <p class="lead mb-5" style="font-style: italic; color: #A0522D;">
+        Di balik senyuman hangat, ada bayang yang mengintai...
+      </p>
+      <a href="tugas171.html" class="btn btn-lg px-5" style="background-color: #A0522D; color: white; border: none; font-family: 'Playfair Display', serif;">
+        Mulai Membaca <span class="blood-drip">🩸</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Stories Section -->
+  <section class="py-5" style="background-color: #0f0a0a;">
+    <div class="container">
+
+      <!-- Cerita 1 -->
+      <div class="row mb-5" id="cerita1">
+        <div class="col-lg-8 mx-auto">
+          <div class="story-card p-4 p-md-5">
+            <img src="RUMAHOROR.jpg" class="img-fluid rounded-4 shadow">
+      
+            </div>
+            <div class="p-4">
+              <h3 class="story-title mb-3">Rumah di Ujung Jalan</h3
+              <p class="story-text">
+                Setiap malam, lampu di rumah tua itu menyala sendiri. Warga bilang, itu hanya korsleting. Tapi aku tahu... 
+                <span style="color: #ff6b6b;">ada seseorang yang menungguku pulang.</span> Bukan ibu. Bukan ayah. 
+                Tapi <em>dia</em> yang pernah tinggal di sana 40 tahun lalu.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cerita 2 -->
+      <div class="row mb-5" id="tu">
+        <div class="col-lg-8 mx-auto">
+          <div class="story-card p-4 p-md-5">
+            <img src="JENDELA.jpg" class="img-fluid rounded-4 shadow">
+            </div>
+            <div class="p-4">
+              <h3 class="story-title mb-3">Jendela yang Selalu Terbuka</h3>
+              <p class="story-text">
+                Aku selalu menutup jendela kamar sebelum tidur. Tapi setiap pagi, 
+                <span style="color: #ff6b6b;">jendelanya terbuka lebar</span> — dan ada jejak kaki kecil di lantai. 
+                Padahal, aku tinggal sendirian.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cerita 3 -->
+      <div class="row mb-5" id="cerita3">
+        <div class="col-lg-8 mx-auto">
+          <div class="story-card p-4 p-md-5">
+            <img src="CERMIN.jpg!w700wp" class="img-fluid rounded-4 shadow">   
+            </div>
+            <div class="p-4">
+              <h3 class="story-title mb-3">Cermin di Kamar Mandi</h3>
+              <p class="story-text">
+                Aku tersenyum di depan cermin. Tapi bayanganku <span style="color: #ff6b6b;">tersenyum lebih lambat</span>. 
+                Dan malam ini, untuk pertama kalinya... ia mengedipkan mata.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-4 text-center">
+    <p>&copy; 2025 Malam Gelap. Semua cerita fiktif. <span class="blood-drip">🩸</span></p>
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
